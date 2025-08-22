@@ -1,0 +1,1 @@
+# Koreys-tili_va_Qoidalari_talafuzi-bilan
