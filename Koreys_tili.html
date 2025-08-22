@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koreys Alifbosi | Chop etish uchun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Asosiy va koreys shriftlari -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Suv belgisi uchun chiroyli shrift -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            position: relative; /* Suv belgisi uchun kerak */
+        }
+        /* Koreyscha matnlar uchun maxsus shrift */
+        .korean {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Suv belgisi (Watermark) stili */
+        .watermark {
+            position: fixed; /* Har bir betda bir joyda turishi uchun */
+            bottom: 25px;
+            right: 25px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: black;
+            opacity: 0.15; /* Xira ko'rinishi uchun */
+            transform: rotate(-15deg); /* Qiyalatish uchun */
+            pointer-events: none; /* Ustiga bosishni o'chiradi */
+            z-index: 1000; /* Boshqa elementlar ustida turishi uchun */
+        }
+
+        /* Chop etish vaqtida kerakli stillar */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                -webkit-print-color-adjust: exact; /* Chrome, Safari */
+                color-adjust: exact; /* Firefox */
+            }
+            .watermark {
+                /* Chop etishda ham ko'rinishini ta'minlash */
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+    
+    <!-- Suv belgisi elementi -->
+    <div class="watermark">abdulloh</div>
+
+    <div class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-lg">
+
+        <!-- Boshqaruv paneli va tugma -->
+        <div class="no-print flex justify-between items-center mb-8 border-b pb-4">
+            <h1 class="text-2xl font-bold text-gray-800">Koreys Alifbosi Hujjati</h1>
+            <button onclick="window.print()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                Chop etish / PDF sifatida saqlash
+            </button>
+        </div>
+
+        <!-- Asosiy sarlavha -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-900 korean">Koreys Alifbosi (한글 - Hangul)</h1>
+            <p class="text-gray-600 mt-2">Koreys alifbosi jami 40 ta harfdan iborat: 19 ta undosh va 21 ta unli.</p>
+        </div>
+
+        <!-- Undoshlar bo'limi -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-2 mb-6 korean">1. Undosh Harflar (자음 - Ja-eum) - 19 ta</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="py-3 px-4 border-b text-left text-sm font-semibold text-gray-600">O'zbekcha</th>
+                            <th class="py-3 px-4 border-b text-center text-sm font-semibold text-gray-600">Koreyscha</th>
+                            <th class="py-3 px-4 border-b text-left text-sm font-semibold text-gray-600">Talaffuzi va Izohlar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">G / K</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㄱ</td><td class="py-3 px-4 border-b">So'z boshida <strong>"k"</strong>, ikki unli orasida <strong>"g"</strong> kabi o'qiladi.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">N</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㄴ</td><td class="py-3 px-4 border-b"><strong>"n"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">D / T</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㄷ</td><td class="py-3 px-4 border-b">So'z boshida <strong>"t"</strong>, ikki unli orasida <strong>"d"</strong> kabi o'qiladi.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">R / L</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㄹ</td><td class="py-3 px-4 border-b">So'z boshida <strong>"r"</strong>, ikki unli orasida yoki so'z oxirida <strong>"l"</strong> kabi o'qiladi.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">M</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅁ</td><td class="py-3 px-4 border-b"><strong>"m"</strong></td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">B / P</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅂ</td><td class="py-3 px-4 border-b">So'z boshida <strong>"p"</strong>, ikki unli orasida <strong>"b"</strong> kabi o'qiladi.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">S</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅅ</td><td class="py-3 px-4 border-b"><strong>"s"</strong>. Agar undan keyin <span class="korean">ㅣ</span>(i) yoki <span class="korean">ㅑ, ㅕ, ㅠ</span> kabi unlilar kelsa, <strong>"sh"</strong> ga yaqin talaffuz qilinadi.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">- / NG</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅇ</td><td class="py-3 px-4 border-b">Bo'g'in boshida <strong>o'qilmaydi</strong>, bo'g'in oxirida <strong>"ng"</strong> tovushini beradi.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">J</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅈ</td><td class="py-3 px-4 border-b"><strong>"j"</strong> yoki <strong>"ch"</strong> o'rtasidagi tovush.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">CH</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅊ</td><td class="py-3 px-4 border-b">Jarangli, havo chiqarib aytiladigan <strong>"ch"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">K</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅋ</td><td class="py-3 px-4 border-b">Jarangli, havo chiqarib aytiladigan <strong>"k"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">T</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅌ</td><td class="py-3 px-4 border-b">Jarangli, havo chiqarib aytiladigan <strong>"t"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">P</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅍ</td><td class="py-3 px-4 border-b">Jarangli, havo chiqarib aytiladigan <strong>"p"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">H</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅎ</td><td class="py-3 px-4 border-b"><strong>"h"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">KK</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㄲ</td><td class="py-3 px-4 border-b">Qattiq, jarangiz <strong>"k"</strong> (o'zbekchadagi "q" ga yaqin).</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">TT</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㄸ</td><td class="py-3 px-4 border-b">Qattiq, jarangiz <strong>"t"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">PP</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅃ</td><td class="py-3 px-4 border-b">Qattiq, jarangiz <strong>"p"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">SS</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅆ</td><td class="py-3 px-4 border-b">Qattiq <strong>"s"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">JJ</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅉ</td><td class="py-3 px-4 border-b">Qattiq <strong>"j"</strong> (o'zbekchadagi "jj" ga yaqin).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Unlilar bo'limi -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-green-500 pb-2 mb-6 korean">2. Unli Harflar (모음 - Mo-eum) - 21 ta</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="py-3 px-4 border-b text-left text-sm font-semibold text-gray-600">O'zbekcha</th>
+                            <th class="py-3 px-4 border-b text-center text-sm font-semibold text-gray-600">Koreyscha</th>
+                            <th class="py-3 px-4 border-b text-left text-sm font-semibold text-gray-600">Talaffuzi va Izohlar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">A</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅏ</td><td class="py-3 px-4 border-b"><strong>"a"</strong></td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">YA</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅑ</td><td class="py-3 px-4 border-b"><strong>"ya"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">O</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅓ</td><td class="py-3 px-4 border-b">Til orqasi bilan aytiladigan qisqa <strong>"o"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">YO</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅕ</td><td class="py-3 px-4 border-b">Til orqasi bilan aytiladigan qisqa <strong>"yo"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">O</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅗ</td><td class="py-3 px-4 border-b">Lablarni cho'chchaytirib aytiladigan <strong>"o"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">YO</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅛ</td><td class="py-3 px-4 border-b">Lablarni cho'chchaytirib aytiladigan <strong>"yo"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">U</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅜ</td><td class="py-3 px-4 border-b"><strong>"u"</strong></td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">YU</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅠ</td><td class="py-3 px-4 border-b"><strong>"yu"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">EU</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅡ</td><td class="py-3 px-4 border-b">Tishlarni bir-biriga yaqinlashtirib aytiladigan <strong>"ı"</strong> (turk tilidagi kabi).</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">I</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅣ</td><td class="py-3 px-4 border-b"><strong>"i"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">E</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅔ</td><td class="py-3 px-4 border-b">Qisqa <strong>"e"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">YE</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅖ</td><td class="py-3 px-4 border-b">Qisqa <strong>"ye"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">AE</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅐ</td><td class="py-3 px-4 border-b">Kengroq aytiladigan <strong>"e"</strong>.</td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">YAE</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅒ</td><td class="py-3 px-4 border-b">Kengroq aytiladigan <strong>"ye"</strong>.</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">WA</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅘ</td><td class="py-3 px-4 border-b"><strong>"va"</strong></td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">WO</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅝ</td><td class="py-3 px-4 border-b"><strong>"vo"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">WAE</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅙ</td><td class="py-3 px-4 border-b"><strong>"ve"</strong></td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">WE</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅞ</td><td class="py-3 px-4 border-b"><strong>"ve"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">OE</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅚ</td><td class="py-3 px-4 border-b"><strong>"ve"</strong></td></tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100"><td class="py-3 px-4 border-b">WI</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅟ</td><td class="py-3 px-4 border-b"><strong>"vi"</strong></td></tr>
+                        <tr class="hover:bg-gray-50"><td class="py-3 px-4 border-b">UI</td><td class="py-3 px-4 border-b text-center text-2xl korean">ㅢ</td><td class="py-3 px-4 border-b"><strong>"ıi"</strong> (tez aytiladi).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Qoidalar bo'limi -->
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-purple-500 pb-2 mb-6 korean">💡 Asosiy Qoidalar va Talaffuz Maslahatlari</h2>
+            <div class="space-y-6 text-gray-700">
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-gray-300">
+                    <h3 class="font-semibold text-lg text-gray-800">1. Bo'g'in Tuzilishi</h3>
+                    <p>Koreys tilida harflar alohida yozilmaydi, ular bo'g'in-bo'g'in qilib, katakchaga sig'dirilgandek yoziladi.</p>
+                    <p class="mt-2 p-3 bg-gray-100 rounded-md text-center text-lg">Masalan: <strong class="korean text-xl">사랑</strong> (sarang - sevgi) so'zi <strong class="korean text-xl">사</strong> (sa) va <strong class="korean text-xl">랑</strong> (rang) bo'g'inlaridan iborat.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-gray-300">
+                    <h3 class="font-semibold text-lg text-gray-800">2. <span class="korean">ㅇ</span> Harfining Sirlari</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li>Agar bo'g'in unli harfdan boshlansa, uning oldiga <strong class="korean">ㅇ</strong> harfi yoziladi, lekin u <strong>o'qilmaydi</strong>. Misol: <strong class="korean">아</strong> (a), <strong class="korean">오</strong> (o), <strong class="korean">이</strong> (i).</li>
+                        <li>Agar <strong class="korean">ㅇ</strong> bo'g'in oxirida (pastroqda) kelsa, u <strong>"ng"</strong> deb o'qiladi. Misol: <strong class="korean">강</strong> (gang), <strong class="korean">공</strong> (gong).</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-gray-300">
+                    <h3 class="font-semibold text-lg text-gray-800">3. So'z O'rniga qarab o'zgaradigan harflar</h3>
+                    <p><strong class="korean">ㄱ, ㄷ, ㅂ, ㄹ</strong> harflarining talaffuzi so'zdagi o'rniga qarab o'zgarishini yodda tuting. Bu eng muhim qoidalardan biri.</p>
+                     <p class="mt-2 p-3 bg-gray-100 rounded-md">Misol: <strong class="korean">가구</strong> (gagu - mebel). Birinchi <strong class="korean">ㄱ</strong> "k" ga yaqin, ikkinchisi "g" ga yaqin talaffuz qilinadi.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-gray-300">
+                    <h3 class="font-semibold text-lg text-gray-800">4. Pastdagi Undoshlar (받침 - Batchim)</h3>
+                    <p>Bo'g'inning eng pastida kelgan undosh "batchim" deyiladi. Ularning o'qilish qoidalari ko'p, lekin boshlanishiga shuni bilish kifoya:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong class="korean">ㄱ, ㅋ, ㄲ</strong> pastda kelsa, qisqa <strong>"k"</strong> tovushini beradi.</li>
+                        <li><strong class="korean">ㄷ, ㅅ, ㅆ, ㅈ, ㅊ, ㅌ, ㅎ</strong> pastda kelsa, qisqa <strong>"t"</strong> tovushini beradi.</li>
+                        <li><strong class="korean">ㅂ, ㅍ</strong> pastda kelsa, qisqa <strong>"p"</strong> tovushini beradi.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
