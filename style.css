@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Hangul Helper Stili - Universal Versiya
+   ========================================================================== */
+
 /* --- Umumiy Sozlamalar va Shriftlar --- */
 :root {
     --primary-red: #CD2E3A;
@@ -6,17 +10,24 @@
     --primary-light: #f4f4f4;
 }
 
+/* --- Barcha sahifalar uchun umumiy BODY stili --- */
 body {
     margin: 0;
     font-family: 'Poppins', 'Noto Sans KR', sans-serif;
     background-color: var(--primary-dark);
     color: var(--primary-light);
-    overflow: hidden; /* Sahifada scroll bo'lmasligi uchun */
+    min-height: 100vh; /* Sahifa kamida ekran bo'yicha bo'lishi uchun */
+}
+
+/* --- FAQAT Bosh sahifa uchun maxsus BODY stili --- */
+.home-body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* Bosh sahifada scroll bo'lmasligi uchun */
 }
+
 
 /* --- Orqa Fon Animatsiyasi --- */
 .background-animation .trigram {
@@ -25,8 +36,8 @@ body {
     color: rgba(255, 255, 255, 0.05);
     animation: float 25s infinite linear;
     user-select: none;
+    z-index: -1; /* Orqa fonda turishi uchun */
 }
-
 .background-animation .trigram:nth-child(1) { top: 10%; left: 10%; animation-duration: 25s; }
 .background-animation .trigram:nth-child(2) { top: 20%; left: 80%; animation-duration: 30s; }
 .background-animation .trigram:nth-child(3) { top: 70%; left: 20%; animation-duration: 20s; }
@@ -38,25 +49,18 @@ body {
     100% { transform: translateY(0) rotate(360deg); }
 }
 
-/* --- Asosiy Kontent --- */
+/* --- Bosh sahifa kontenti --- */
 .main-container {
     text-align: center;
     z-index: 10;
     animation: fadeIn 1.5s ease-in-out;
 }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .main-header .title {
     font-size: 4rem;
     font-weight: 600;
     margin: 0;
     letter-spacing: 2px;
 }
-
 .main-header .subtitle {
     font-size: 1.2rem;
     font-weight: 300;
@@ -64,14 +68,13 @@ body {
     margin-top: 10px;
 }
 
-/* --- Navigatsiya Tugmalari --- */
+/* --- Bosh sahifa tugmalari --- */
 .main-nav {
     margin-top: 50px;
     display: flex;
     gap: 25px;
     justify-content: center;
 }
-
 .nav-button {
     position: relative;
     padding: 15px 40px;
@@ -84,12 +87,7 @@ body {
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     overflow: hidden;
 }
-
-.nav-button span {
-    position: relative;
-    z-index: 2;
-}
-
+.nav-button span { position: relative; z-index: 2; }
 .nav-button::before {
     content: '';
     position: absolute;
@@ -102,31 +100,22 @@ body {
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     z-index: 1;
 }
+.nav-button:hover::before { transform: scaleX(1); }
+.nav-button:nth-child(1):hover { color: var(--primary-dark); border-color: var(--primary-red); }
+.nav-button:nth-child(1)::before { background-color: var(--primary-red); }
+.nav-button:nth-child(2):hover { color: var(--primary-dark); border-color: var(--primary-blue); }
+.nav-button:nth-child(2)::before { background-color: var(--primary-blue); }
 
-.nav-button:hover::before {
-    transform: scaleX(1);
-}
-
-.nav-button:nth-child(1):hover { color: var(--primary-dark); }
-.nav-button:nth-child(1)::before { background-color: var(--primary-red); border-color: var(--primary-red); }
-.nav-button:nth-child(1):hover { border-color: var(--primary-red); }
-
-
-.nav-button:nth-child(2):hover { color: var(--primary-dark); }
-.nav-button:nth-child(2)::before { background-color: var(--primary-blue); border-color: var(--primary-blue); }
-.nav-button:nth-child(2):hover { border-color: var(--primary-blue); }
-
-
-/* --- Ichki sahifalar uchun stillar --- */
+/* --- Ichki sahifalar uchun KONTENER (YANGILANGAN) --- */
 .inner-page-container {
-    padding: 40px;
+    padding: 40px 20px; /* Padding moslashtirildi */
     max-width: 1200px;
     margin: 0 auto;
     animation: fadeIn 1s ease-in-out;
-    height: 100vh;
-    overflow-y: auto;
+    /* height va overflow olib tashlandi, sahifa endi tabiiy scroll bo'ladi */
 }
 
+/* --- Ichki sahifa elementlari (YANGILANGAN) --- */
 .back-link {
     display: inline-block;
     margin-bottom: 40px;
@@ -135,23 +124,19 @@ body {
     font-size: 1.1rem;
     transition: color 0.3s;
 }
-
-.back-link:hover {
-    color: var(--primary-red);
-}
-
+.back-link:hover { color: var(--primary-red); }
 .page-title {
-    font-size: 3rem;
+    font-size: 2.8rem; /* Shrift moslashtirildi */
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
-
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Grid moslashtirildi */
+    gap: 15px; /* Oradagi masofa kichraytirildi */
 }
 
+/* --- KARTALAR stillari --- */
 .card {
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -161,87 +146,21 @@ body {
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-color: var(--primary-red);
 }
-
 .card-title {
     font-size: 3rem;
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
 }
-
 .card-description {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     margin-top: 10px;
 }
-
-/* Mobil qurilmalar uchun */
-@media (max-width: 768px) {
-    .main-header .title { font-size: 3rem; }
-    .main-nav { flex-direction: column; }
-    .page-title { font-size: 2.5rem; }
-    .content-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
-}
-
-/* --- Raqamlar sahifasidagi tanlov tugmalari uchun stillar --- */
-.selector-container {
-    text-align: center;
-    margin-bottom: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    padding: 5px;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.selector-button {
-    padding: 10px 25px;
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    color: rgba(255, 255, 255, 0.7);
-    background-color: transparent;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.selector-button.active {
-    background-color: var(--primary-red);
-    color: white;
-    box-shadow: 0 0 10px var(--primary-red);
-}
-
-/* --- Raqam bo'limlari uchun stillar --- */
-.numbers-section {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    text-align: center;
-    color: var(--primary-light);
-    margin-bottom: 10px;
-}
-
-.section-description {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-}
-
-.hidden {
-    display: none;
-}
-
-/* --- Kartochkadagi tovush uchun qo'shimcha stil --- */
 .card-sound {
     font-size: 0.9rem;
     color: var(--primary-red);
@@ -250,4 +169,77 @@ body {
     margin-bottom: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 10px;
+}
+
+/* --- Raqamlar sahifasi uchun stillar --- */
+.selector-container {
+    text-align: center;
+    margin: 0 auto 40px auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 5px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.selector-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.selector-button.active {
+    background-color: var(--primary-red);
+    color: white;
+    box-shadow: 0 0 10px var(--primary-red);
+}
+.numbers-section { animation: fadeIn 0.5s ease-in-out; }
+.section-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 10px;
+}
+.section-description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+.hidden { display: none; }
+
+
+/* ==========================================================================
+   MOBIL MOSLASHUV (RESPONSIVE)
+   ========================================================================== */
+
+/* Planshet va kichik noutbuklar uchun */
+@media (max-width: 768px) {
+    .main-header .title { font-size: 3rem; }
+    .main-nav { flex-direction: column; }
+    .page-title { font-size: 2.5rem; }
+}
+
+/* Telefonlar uchun (YANGI QO'SHILDI) */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    .selector-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .card-title {
+        font-size: 2.5rem;
+    }
+    .main-header .title {
+        font-size: 2.5rem;
+    }
+    .nav-button {
+        padding: 12px 30px;
+    }
 }
