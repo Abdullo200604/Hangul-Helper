@@ -187,3 +187,56 @@ body {
     .page-title { font-size: 2.5rem; }
     .content-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
 }
+
+/* --- Raqamlar sahifasidagi tanlov tugmalari uchun stillar --- */
+.selector-container {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 5px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.selector-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selector-button.active {
+    background-color: var(--primary-red);
+    color: white;
+    box-shadow: 0 0 10px var(--primary-red);
+}
+
+/* --- Raqam bo'limlari uchun stillar --- */
+.numbers-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.hidden {
+    display: none;
+}
