@@ -240,3 +240,14 @@ body {
 .hidden {
     display: none;
 }
+
+/* --- Kartochkadagi tovush uchun qo'shimcha stil --- */
+.card-sound {
+    font-size: 0.9rem;
+    color: var(--primary-red);
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
