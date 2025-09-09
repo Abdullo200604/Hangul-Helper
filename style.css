@@ -1,0 +1,189 @@
+/* --- Umumiy Sozlamalar va Shriftlar --- */
+:root {
+    --primary-red: #CD2E3A;
+    --primary-blue: #0047A0;
+    --primary-dark: #222;
+    --primary-light: #f4f4f4;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    overflow: hidden; /* Sahifada scroll bo'lmasligi uchun */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* --- Orqa Fon Animatsiyasi --- */
+.background-animation .trigram {
+    position: absolute;
+    font-size: 10vw;
+    color: rgba(255, 255, 255, 0.05);
+    animation: float 25s infinite linear;
+    user-select: none;
+}
+
+.background-animation .trigram:nth-child(1) { top: 10%; left: 10%; animation-duration: 25s; }
+.background-animation .trigram:nth-child(2) { top: 20%; left: 80%; animation-duration: 30s; }
+.background-animation .trigram:nth-child(3) { top: 70%; left: 20%; animation-duration: 20s; }
+.background-animation .trigram:nth-child(4) { top: 80%; left: 70%; animation-duration: 35s; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* --- Asosiy Kontent --- */
+.main-container {
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-header .title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.main-header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+/* --- Navigatsiya Tugmalari --- */
+.main-nav {
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.nav-button {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-light);
+    border: 2px solid var(--primary-light);
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.nav-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+}
+
+.nav-button:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-button:nth-child(1):hover { color: var(--primary-dark); }
+.nav-button:nth-child(1)::before { background-color: var(--primary-red); border-color: var(--primary-red); }
+.nav-button:nth-child(1):hover { border-color: var(--primary-red); }
+
+
+.nav-button:nth-child(2):hover { color: var(--primary-dark); }
+.nav-button:nth-child(2)::before { background-color: var(--primary-blue); border-color: var(--primary-blue); }
+.nav-button:nth-child(2):hover { border-color: var(--primary-blue); }
+
+
+/* --- Ichki sahifalar uchun stillar --- */
+.inner-page-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: var(--primary-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--primary-red);
+}
+
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-red);
+}
+
+.card-title {
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+/* Mobil qurilmalar uchun */
+@media (max-width: 768px) {
+    .main-header .title { font-size: 3rem; }
+    .main-nav { flex-direction: column; }
+    .page-title { font-size: 2.5rem; }
+    .content-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+}
