@@ -3,43 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koreys Tili O'rganamiz</title>
+    <title>Hafta Kunlari - Koreys Tili</title>
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="/manifest.json">
 </head>
-<body class="home-body">
-    <div class="background-animation">
-        <div class="trigram">☰</div>
-        <div class="trigram">☷</div>
-        <div class="trigram">☲</div>
-        <div class="trigram">☵</div>
-    </div>
+<body>
+    <div class="main-container card-page-container">
+        <a href="index.html" class="back-button">← Bosh Sahifa</a>
 
-    <div class="main-container">
         <header class="main-header">
-            <h1 class="title">Koreys Tili</h1>
-            <p class="subtitle">O'rganishni boshlang</p>
+            <h1 class="title">Hafta Kunlari</h1>
         </header>
 
-        <nav class="main-nav">
-            <a href="harflar.html" class="nav-button">
-                <span>Harflar</span>
-            </a>
-            <a href="raqamlar.html" class="nav-button">
-                <span>Raqamlar</span>
-            </a>
-            <a href="sozlar.html" class="nav-button">
-                <span>So'zlar</span>
-            </a>
-            <a href="hafta-kunlari.html" class="nav-button">
-                <span>Hafta Kunlari</span>
-            </a>
-        </nav>
-    </div>
+        <div class="word-card">
+            <h2 id="korean-word"></h2>
+            <p id="english-word"></p>
+            <p id="romanization" class="romanization-text"></p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="navigation">
+            <button onclick="prevWord()">Oldingisi</button>
+            <button onclick="nextWord()">Keyingisi</button>
+        </div>
+    </div>
+    
+    <script src="hafta-kunlari.js"></script>
 </body>
 </html>
