@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hafta Kunlari - Koreys Tili</title>
+    <title>Hafta Kunlari | Koreys Tili</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <a href="index.html" class="back-button">← Bosh Sahifa</a>
+<body class="page-body">
+    <header class="page-header">
+        <h1>Hafta Kunlari (요일)</h1>
+        <p>Koreys tilida hafta kunlari quyidagicha ataladi:</p>
+    </header>
 
-        <h1>Hafta Kunlari</h1>
+    <main class="content">
         <div class="word-card">
-            <h2 id="korean-word"></h2>
-            <p id="english-word"></p>
-            <p id="romanization"></p>
+            <h2>월요일 (Woryoil)</h2>
+            <p>Dushanba</p>
         </div>
-        <div class="navigation">
-            <button onclick="prevWord()">Oldingisi</button>
-            <button onclick="nextWord()">Keyingisi</button>
+        <div class="word-card">
+            <h2>화요일 (Hwayoil)</h2>
+            <p>Seshanba</p>
         </div>
-    </div>
-    
-    <script src="hafta-kunlari.js"></script>
+        <div class="word-card">
+            <h2>수요일 (Suyoil)</h2>
+            <p>Chorshanba</p>
+        </div>
+        <div class="word-card">
+            <h2>목요일 (Mogyoil)</h2>
+            <p>Payshanba</p>
+        </div>
+        <div class="word-card">
+            <h2>금요일 (Geumyoil)</h2>
+            <p>Juma</p>
+        </div>
+        <div class="word-card">
+            <h2>토요일 (Toyoil)</h2>
+            <p>Shanba</p>
+        </div>
+        <div class="word-card">
+            <h2>일요일 (Iryoil)</h2>
+            <p>Yakshanba</p>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <a href="index.html" class="back-button">⬅ Bosh sahifaga qaytish</a>
+    </footer>
 </body>
 </html>
