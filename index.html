@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koreys Tili O'rganamiz</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-    <!-- Styles & manifest -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
 </head>
-
 <body class="home-body">
-    <!-- Background animation (trigrams) -->
     <div class="background-animation">
         <div class="trigram">☰</div>
         <div class="trigram">☷</div>
@@ -28,35 +22,30 @@
         <header class="main-header">
             <h1 class="title">Koreys Tili</h1>
             <p class="subtitle">O'rganishni boshlang</p>
+            
+            <div id="visitor-counter">
+                <span class="eye-icon">👁️</span>
+                <span id="visits">...</span>
+            </div>
+            
         </header>
 
-        <nav class="main-nav" role="navigation" aria-label="Asosiy menyu">
-            <a href="harflar.html" class="nav-button" aria-label="Harflar sahifasiga o'tish">
+        <nav class="main-nav">
+            <a href="harflar.html" class="nav-button">
                 <span>Harflar</span>
             </a>
-
-            <a href="raqamlar.html" class="nav-button" aria-label="Raqamlar sahifasiga o'tish">
+            <a href="raqamlar.html" class="nav-button">
                 <span>Raqamlar</span>
             </a>
-
-            <a href="haftakunlari.html" class="nav-button" aria-label="Hafta kunlari sahifasiga o'tish">
-                <span>Hafta kunlari</span>
+            <a href="Kunlar.html" class="nav-button">
+                <span>Hafta Kunlari</span>
             </a>
-
-            <a href="kunlar.html" class="nav-button" aria-label="31 kunlik (kunlar) sahifasiga o'tish">
-                <span>31 kunlik</span>
-            </a>
-
-            <a href="oylar.html" class="nav-button" aria-label="Oylar sahifasiga o'tish">
+            <a href="Oylar.html" class="nav-button">
                 <span>Oylar</span>
             </a>
         </nav>
-
-        <footer class="main-footer">
-            <p class="footer-note">© <!-- yil avtomatik emas, xohlasang qoʻshib qoʻyamiz --> Koreys Tili — Hangul Helper</p>
-        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="counter.js"></script>
 </body>
 </html>
